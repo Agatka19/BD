@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Choose features</title>
+</head>
+<body>
+
+{#NAVIGATION BAR#}
+<nav class="navbar navbar-expand-lg navbar-light bg-light" >
+    <a class="navbar-brand" href="/cosmetics_app">Hair Cosmetics App</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        {#      wszystko co bedzie sie wyswietlac na pasku nawigacji#}
+        <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item">
+                <a class="nav-link" href="/cosmetics_app/brands">Brands</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/cosmetics_app/types">Types</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/cosmetics_app/cosmetics">Cosmetics</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/cosmetics_app/ingredients">Ingredients</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/cosmetics_app/functions">Functions</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/cosmetics_app/features">Features</a>
+            </li>
+
+        </ul>
+        <ul class="navbar-nav mr-auto w-100 justify-content-end">
+{#            <li class="nav-item" style="float: right;">#}
+{#                <a style="float: right;" class="nav-link" href="/cosmetics_app/create"><i>Create brand</i> </a>#}
+{#            </li>#}
+{#            <li class="nav-item" style="float: right;">#}
+{#                <a style="float: right;" class="nav-link" href="/cosmetics_app/create"><i>Create type</i> </a>#}
+{#            </li>#}
+            <li class="nav-item" style="float: right;">
+                <a style="float: right;" class="nav-link" href="/cosmetics_app/create"><i>Create cosmetic</i> </a>
+            </li>
+        </ul>
+        {#      koniec rzeczy na pasku nawigacji#}
+    </div>
+</nav>
+{#NAVIGATION BAR - ENDS#}
+
+<div class="container mb-lg-5">
+
+    <h2 class="mt-4 mb-4">Hello! :) Let me know what you're looking for...</h2>
+
+    <form action="/cosmetics_app/suggestions" method="get">
+        {#        type_name#}
+        <div class="form-group">
+            <label for="name">Type</label>
+            <input type="text" class="form-control" id="name" name="type_name" placeholder="Choose type...">
+            <small id="1" class="form-text text-muted">Write all types of cosmetics you look for separated by a comma (for
+                example: 'shampoo, conditioner').</small>
+            <small class="form-text text-muted">The list of available types is in the <a class="text-info" href="/cosmetics_app/types">Types</a> tab.</small>
+
+        </div>
+        {#        country#}
+        <div class="form-group">
+            <label for="name">Country</label>
+            <input type="text" class="form-control" id="name" name="brand_country" placeholder="Choose country...">
+            <small id="2" class="form-text text-muted">Write all countries of production you look for separated by a comma
+                (for example: 'Poland, Russia').</small>
+                        <small class="form-text text-muted">The list of available brand and their countries is in the <a class="text-info" href="/cosmetics_app/brands">Brands</a> tab.</small>
+
+        </div>
+        {#        feature#}
+        <div class="form-group">
+            <label for="name">Feature</label>
+            <input type="text" class="form-control" id="name" name="ingredient_function_feature"
+                   placeholder="Choose features...">
+            <small id="4" class="form-text text-muted">Write all the features you need separated by a comma (for example:
+                'dry hair, dandruff').</small>
+                        <small class="form-text text-muted">The list of available features is in the <a class="text-info" href="/cosmetics_app/features">Features</a> tab.</small>
+
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <h4 class="mt-lg-5">.. or if you want to check specific cosmetic's features - visit <a class="text-info" href="/cosmetics_app/cosmetics">Cosmetics</a> tab.</h4>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>

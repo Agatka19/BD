@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Cosmetics</title>
+</head>
+<body>
+
+{#NAVIGATION BAR#}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/cosmetics_app">Hair Cosmetics App</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        {#      wszystko co bedzie sie wyswietlac na pasku nawigacji#}
+        <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item">
+                <a class="nav-link" href="/cosmetics_app/brands">Brands</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/cosmetics_app/types">Types</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/cosmetics_app/cosmetics">Cosmetics</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/cosmetics_app/ingredients">Ingredients</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/cosmetics_app/functions">Functions</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/cosmetics_app/features">Features </a>
+            </li>
+        </ul>
+                <ul class="navbar-nav mr-auto w-100 justify-content-end">
+{#            <li class="nav-item" style="float: right;">#}
+{#                <a style="float: right;" class="nav-link" href="/cosmetics_app/create"><i>Create brand</i> </a>#}
+{#            </li>#}
+{#            <li class="nav-item" style="float: right;">#}
+{#                <a style="float: right;" class="nav-link" href="/cosmetics_app/create"><i>Create type</i> </a>#}
+{#            </li>#}
+            <li class="nav-item active" style="float: right;">
+                <a style="float: right;" class="nav-link" href="#"><i>Create cosmetic</i> <span class="sr-only">(current)</span> </a>
+            </li>
+        </ul>
+        {#      koniec rzeczy na pasku nawigacji#}
+    </div>
+</nav>
+{#NAVIGATION BAR - ENDS#}
+
+<div class="container">
+    <h1 class="container mt-lg-5">Create cosmetic </h1>
+    <form class="container mt-lg-5" action="" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" name="name">
+            <small class="form-text text-muted">Write full name of the new cosmetic.</small>
+        </div>
+        <div class="form-group">
+            <label for="name">Brand</label>
+            <input type="text" class="form-control" name="brand">
+            <small class="form-text text-muted">Write the brand of the new cosmetic.</small>
+            <small class="form-text text-muted">The list of available brands is in the <a class="text-info" href="/cosmetics_app/brands">Brands</a> tab.</small>
+        </div>
+        <div class="form-group">
+            <label for="name">Type</label>
+            <input type="text" class="form-control" name="type">
+            <small class="form-text text-muted">Write the type of the new cosmetic.</small>
+            <small class="form-text text-muted">The list of available types is in the <a class="text-info" href="/cosmetics_app/types">Types</a> tab.</small>
+        </div>
+        <div class="form-group">
+            <label for="name">Ingredients</label>
+            <input type="text" class="form-control" name="ingredient">
+            <small class="form-text text-muted">Write all ingredients separated by a comma (for example: "aqua,
+                glycerin").<br>
+                The list of available ingredients is in the <a class="text-info" href="/cosmetics_app/types">Ingredients</a> tab.</small>
+        </div>
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
